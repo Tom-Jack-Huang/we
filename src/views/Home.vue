@@ -17,7 +17,12 @@
             </div>
         </Upload>
         <Button type="primary" @click="downFile">下载</Button>
-        <Button type="primary" @click="getTest">get</Button>
+        <div>
+            <Button type="primary" @click="getTest">get</Button>
+        </div>
+        <div>
+            <Button type="primary" @click="getFileTest">文件上传测试</Button>
+        </div>
 
     </div>
 </template>
@@ -55,7 +60,7 @@
                 this.fileData["fileName"] = file.name;
             },
             downFile: function () {
-                http.post("/file/downloadFile", {"fileName":"iconfont.ttf"}).then((data)=>{
+                http.post("/file/downloadFileFromFtp", {"fileName":"iconfont.ttf"}).then((data)=>{
                     console.log(data);
 
                 }).catch((error)=>{
@@ -64,6 +69,13 @@
             },
             getTest:function () {
                 http.get("/test/test",{}).then((data)=>{
+                    console.log(data);
+                }).catch((error)=>{
+                   console.log(error);
+                });
+            },
+            getFileTest:function () {
+                http.post("/file/uploadFile",{}).then((data)=>{
                     console.log(data);
                 }).catch((error)=>{
                    console.log(error);
