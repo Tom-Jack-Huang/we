@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
+import 'normalize.css'
+import './css/commont.css'
 Vue.config.productionTip = false;
 Vue.use(ViewUI);
 
