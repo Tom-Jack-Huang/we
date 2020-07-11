@@ -4,11 +4,12 @@
 .we-input-lab {
     margin-top: 20px;
 }
+.we-input-lab span {
+    margin-right: 15px;
+    font-size: 18px;
+    color: red;
+}
 .we-login-btn {
     margin-top: 40px;
-    width: 300px;
-}
-.we-login-bottom {
-    margin-top: 15px;
     width: 300px;
 }
