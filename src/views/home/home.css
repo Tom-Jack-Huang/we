@@ -1,0 +1,18 @@
+.ivu-layout {
+    height: 100%;
+}
+.we-side {
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #e1edff;
+    padding: 50px 0;
+}
+.we-content {
+    background-color: #fbfdff;
+}
+.we-side-items {
+   margin-top: 80px;
+    padding: 0 25px;
+}
+.ivu-layout-sider-children {
+    width: 100%;
+}

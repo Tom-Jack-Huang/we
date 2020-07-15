@@ -1,0 +1,21 @@
+.we-home-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+
+}
+.we-side-nick {
+    margin-top: 30px;
+    color: #101010;
+    font-size: 20px;
+}
+.we-side-nick .we-side-notice {
+    color: #d4e6ff;
+    margin-left: 15px;
+    font-size: 22px;
+}
+.we-side-leave {
+    margin-top: 25px;
+    color: #c4c4c4;
+    font-size: 18px;
+}

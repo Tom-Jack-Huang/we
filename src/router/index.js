@@ -13,6 +13,11 @@ Vue.use(VueRouter)
       path: '/register',
       name: 'Register',
       component:()=>import('../views/register/register')
+    },
+    {
+      path: '/',
+      name: 'home',
+      component:()=>import('../views/home/home')
     }
 ]
 
@@ -23,14 +28,15 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  // console.log(store.state.loginState);
-  if (to.name === 'Register') {
-    next();
-  } else if (to.name !== 'Login' &&!store.state.loginState ){
-    next({ name: 'Login' });
-  } else {
-    next();
-  }
+  console.log(store.state.loginState);
+  // if (to.name === 'Register') {
+  //   next();
+  // } else if (to.name !== 'Login' &&!store.state.loginState ){
+  //   next({ name: 'Login' });
+  // } else {
+  //   next();
+  // }
+  next();
 });
 
 export default router
