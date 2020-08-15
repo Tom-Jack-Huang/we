@@ -1,7 +1,25 @@
-.we-side-item-forward,.we-side-item-title,.we-side-item-icon {
+.we-side-item-forward, .we-side-item-title, .we-side-item-icon {
     color: #c4c4c4;
     font-size: 20px;
 }
+
 .we-side-item {
     margin-bottom: 40px;
+}
+.iconfont {
+    font-size: 20px;
+    margin-left: 15px;
+
+}
+.el-icon-arrow-right {
+    color: #d6d6d6;
+}
+.nowShow {
+    visibility: hidden;
+}
+.we-side-item-icon-activity {
+    color: #d4e6ff;
+}
+.we-side-item-activity {
+    color: #5babff;
 }

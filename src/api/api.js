@@ -6,7 +6,11 @@ const loginApi = (param) => {
 const registerApi = (param) => {
     return http.post('/userInfo/register', param);
 }
+const wxTokenApi = (param) => {
+    return http.post('/share/wxToken',param);
+}
 export default {
     loginApi,
-    registerApi
+    registerApi,
+    wxTokenApi
 }

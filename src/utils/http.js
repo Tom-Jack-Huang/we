@@ -1,14 +1,13 @@
 import axios from 'axios'
 import qs from 'qs'
-import { Message } from 'element-ui';
-
+import {Message} from 'element-ui';
 
 
 const instance = axios.create({
     baseURL: "/api",
     timeout: 1000,
     headers: {
-        'Content-Type':'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded'
     }
 });
 //
@@ -40,17 +39,17 @@ function checkCode(res) {
         Message.error("服务器内部错误");
     }
 
-   return Promise.reject(res);
+    return Promise.reject(res);
 }
 
 function post(url, data) {
     return instance({
         method: 'post',
         url,
-       data:qs.stringify(data),
-    }).then((response)=>{
+        data: qs.stringify(data),
+    }).then((response) => {
         return checkStatus(response);
-    } ).catch((error)=>{
+    }).catch((error) => {
         return checkCode(error.response);
     });
 }
@@ -60,9 +59,9 @@ function get(url, params) {
         method: 'get',
         url,
         params,
-    }).then((response)=>{
+    }).then((response) => {
         return checkStatus(response);
-    } ).catch((error)=>{
+    }).catch((error) => {
         return checkCode(error.response);
     });
 }
